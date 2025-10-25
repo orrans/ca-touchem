@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top left, #1f2a44 0%, #0f172a 100%);
+    background-attachment: fixed;
+    color: #e6ebff;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    user-select: none;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #7aa2ff;
+    text-shadow: 0 0 6px rgba(122, 162, 255, 0.7), 0 0 14px rgba(122, 162, 255, 0.4),
+        0 0 28px rgba(122, 162, 255, 0.25);
+    text-decoration: underline 5px;
+}
+
+.controls {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.board-size,
+.difficulty,
+.misc {
+    margin: 10px 0;
+}
+
+.controls span {
+    font-weight: bold;
+    color: #a8b3cf;
+    margin-right: 8px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e6ebff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 3px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: rgba(122, 162, 255, 0.4);
+}
+
+button.clicked {
+    background: linear-gradient(180deg, #7aa2ff, #4f7dff);
+    border-color: rgba(122, 162, 255, 0.8);
+}
+
+button.restart {
+    margin-top: 15px;
+    min-height: 35px;
+    transition: none !important;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: none !important;
+}
+
+.next-num {
+    display: inline-block;
+    min-width: 40px;
+    height: 40px;
+    background: rgba(122, 162, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-left: 5px;
+}
+
+.timer-container {
+    margin-top: 10px;
+}
+
+.timer,
+.highscore {
+    margin: 4px 0;
+    color: #a8b3cf;
+}
+
+table {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: auto;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    width: 500px;
+    height: 480px;
+    table-layout: fixed;
+    border-spacing: 6px;
+}
+
+table td {
+    width: auto;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+td:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Colors when clicked */
+table td.clicked {
+    background: linear-gradient(180deg, #2ccf8c, #1ea86e);
+    box-shadow: 0 0 10px rgba(44, 207, 140, 0.6);
+}
+
+.wrong {
+    box-shadow: 0 0 15px rgba(255, 18, 18, 0.848);
+}

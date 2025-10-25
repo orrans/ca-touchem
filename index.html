@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Touch the Numbers</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body onload="init()">
+        <header>
+            <h1>TOUCH 'EM</h1>
+            <div class="controls">
+                <div class="board-size">
+                    <span>Board Size:</span>
+                    <button onclick="changeBoardSize(9,this)">9</button>
+                    <button onclick="changeBoardSize(16,this)">16</button>
+                    <button onclick="changeBoardSize(25,this)">25</button>
+                    <button onclick="changeBoardSize(36,this)">36</button>
+                </div>
+
+                <div class="difficulty">
+                    <span>Difficulty:</span>
+                    <button onclick="changeDifficulty(0,this)">Easy</button>
+                    <button onclick="changeDifficulty(1,this)">Hard</button>
+                </div>
+
+                <div class="misc">
+                    <span>Click On:</span>
+                    <span class="next-num">1</span>
+
+                    <div class="timer-container">
+                        <div class="highscore">
+                            <span>Best time:</span>
+                            <span class="highscore-timer">
+                                <span class="minute">00</span>
+                                <span class="sep">:</span>
+                                <span class="seconds">00</span>
+                                <span class="sep">.</span>
+                                <span class="milliseconds">00</span>
+                            </span>
+                        </div>
+
+                        <div class="timer">
+                            <span>Time:</span>
+                            <span class="highscore-timer">
+                                <span class="minute">00</span>
+                                <span class="sep">:</span>
+                                <span class="seconds">00</span>
+                                <span class="sep">.</span>
+                                <span class="milliseconds">00</span>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="restart hidden" onclick="restart()"></button>
+                </div>
+            </div>
+        </header>
+
+        <table>
+            <tbody class="numbers">
+            </tbody>
+        </table>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
